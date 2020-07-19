@@ -23,11 +23,6 @@ pipeline {
                 sh 'npm start'
             }
         }
-        stage('Finish the pipeline'){
-            steps{
-                sh 'ls'
-            }
-        }
     }
 }
 
