@@ -8,7 +8,7 @@ pipeline {
                git poll: true, url: 'https://github.com/AzuladoToujours/jenkins-CS.git'    
               }
        }
-        stage('Build') {
+        stage('Install Requirements') {
             steps {
                 sh 'npm install'
             }
@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Run App'){
             steps{
-                sh 'npm start'
+                sh 'npm start & ls'
             }
         }
     }
