@@ -1,4 +1,4 @@
-const sayHello = () => ({message: 'Hello World'});
+const sayHello = () => ({message: 'Testing webhook'});
 
 const sayHelloController = (req,res) => {
     const hello = sayHello()
