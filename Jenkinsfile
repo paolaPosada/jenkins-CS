@@ -20,7 +20,12 @@ pipeline {
         }
         stage('Run App'){
             steps{
-                sh 'npm start & ls'
+                sh 'npm start'
+            }
+        }
+        stage('Finish the pipeline'){
+            steps{
+                sh 'ls'
             }
         }
     }
