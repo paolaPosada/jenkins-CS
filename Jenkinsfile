@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Run App'){
             steps{
-                sh 'BUILD_ID=dontKillMe npm start &'
+                sh 'BUILD_ID=dontKillMe npm start'
             }
         }
     }
