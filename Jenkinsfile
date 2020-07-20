@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'NodoEsclavo'
-    }
+    agent any
     stages {
        stage('Checkout-git'){
               steps {
@@ -13,14 +11,9 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') { 
+        stage('Test App') { 
             steps {
                  sh 'npm test'
-            }
-        }
-        stage('Run App'){
-            steps{
-                sh 'BUILD_ID=dontKillMe npm start'
             }
         }
     }
