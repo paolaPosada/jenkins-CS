@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'NodoEsclavo'
+    }
     stages {
        stage('Checkout-git'){
               steps {
